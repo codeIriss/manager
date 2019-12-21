@@ -1,0 +1,3 @@
+<h1><%= @task.name %></h1> <ul> <% @task.comments.find_each do |comment| %> <li><%= comment.note %></li>
+  <% end %>
+</ul>
