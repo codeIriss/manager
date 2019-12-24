@@ -1,6 +1,6 @@
 class CommentsMailbox < ApplicationMailbox
   #before_processing :find_user
-  before_filter :login_required, :except=>[:new, :create]
+  skip_before_filter :login_required, :except=>[:new, :create]
 
   def process
   	#return unless @user
